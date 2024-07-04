@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap");
+
+:root {
+  --bg-color: #120458;
+  --text-color: #f72585;
+  --neon-pink: #f72585;
+  --neon-blue: #4cc9f0;
+  --neon-purple: #7209b7;
+}
+
+body {
+  font-family: "Orbitron", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(
+    45deg,
+    var(--bg-color),
+    #3a0ca3,
+    var(--neon-purple)
+  );
+  color: var(--text-color);
+  min-height: 100vh;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--neon-pink);
+  padding: 1rem 0;
+  text-align: center;
+}
+
+h1,
+h2,
+h3 {
+  text-shadow: 0 0 10px var(--neon-pink), 0 0 20px var(--neon-pink),
+    0 0 30px var(--neon-pink);
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: var(--neon-blue);
+  text-decoration: none;
+  text-shadow: 0 0 5px var(--neon-blue);
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--neon-pink);
+  text-shadow: 0 0 10px var(--neon-pink);
+}
+
+section {
+  padding: 2rem;
+  margin: 1rem auto;
+  max-width: 800px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(247, 37, 133, 0.3);
+}
+
+.project {
+  margin-bottom: 1.5rem;
+  border-left: 3px solid var(--neon-blue);
+  padding-left: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin: 0.5rem 0 0.2rem;
+  color: var(--neon-blue);
+}
+
+form input,
+form textarea {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--neon-purple);
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: var(--text-color);
+}
+
+form button,
+.file-item button {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--neon-blue);
+  color: var(--bg-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+form button:hover,
+.file-item button:hover {
+  background-color: var(--neon-pink);
+  box-shadow: 0 0 10px var(--neon-pink);
+}
+
+.file-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.file-item {
+  border: 1px solid var(--neon-purple);
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+  cursor: grab;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.file-item:hover {
+  box-shadow: 0 0 15px var(--neon-blue);
+}
+
+.file-item img {
+  max-width: 100%;
+  max-height: 150px;
+  display: block;
+  margin: 0 auto 1rem;
+  border: 2px solid var(--neon-pink);
+  border-radius: 4px;
+}
+
+.file-item button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--neon-pink);
+}
+
+.file-item.dragging {
+  opacity: 0.5;
+  cursor: grabbing;
+}
+
+.file-item span {
+  word-wrap: break-word;
+  width: 100%;
+  text-align: center;
+  color: var(--neon-blue);
+}

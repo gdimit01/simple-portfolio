@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Synthwave Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Retro Future Dev</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        Welcome to my neon-drenched digital realm! I'm a web developer with a
+        passion for creating stunning websites and applications that transport
+        users to a retro-futuristic cyberspace.
+      </p>
+    </section>
+    <section id="projects">
+      <h2>Cybernetic Projects</h2>
+      <div class="project">
+        <h3>Neon Grid</h3>
+        <p>A responsive CSS grid system inspired by 80s sci-fi UI designs.</p>
+      </div>
+      <div class="project">
+        <h3>Synthwave Audio Visualizer</h3>
+        <p>
+          An immersive audio experience that generates real-time neon visuals.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Connect to My Mainframe</h2>
+      <form id="contactForm">
+        <label for="name">Your Alias:</label>
+        <input type="text" id="name" name="name" required />
+        <label for="email">Comm Channel:</label>
+        <input type="email" id="email" name="email" required />
+        <label for="message">Transmission:</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit">Send Signal</button>
+      </form>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
